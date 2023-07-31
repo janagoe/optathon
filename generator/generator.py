@@ -15,7 +15,7 @@ class Generator:
 
         folder = 'homberger_{}_customer_instances'.format(customer_instances)
         self.path = os.path.join(
-            os.getcwd(), 'datasets_generator', 'homberger', folder)
+            os.getcwd(), 'generator', 'homberger', folder)
 
         for filename in os.listdir(self.path):
             filepath = os.path.join(self.path, filename)
