@@ -33,6 +33,8 @@ class SchedulingOutput:
     def add_assignment(self, amr_id: int, task_id: int, start_time=None):
         if start_time is None:
 
+            task = self.data_intput.get_task_by_id(task_id)
+
             if len(self.assignments[amr_id]) == 0:
                 start_time = 0
             else:
@@ -40,6 +42,7 @@ class SchedulingOutput:
                 assert (last_assignment.duration is not None)
 
                 start_time = last_assignment.start_time + last_assignment.duration
+                start_time = max(start_time, task.time_window.earliest_start)
 
         duration, empty_travel_distance, lateness = self._calc_assignment_metrics(
             amr_id, task_id, start_time)
