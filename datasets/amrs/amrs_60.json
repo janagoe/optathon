@@ -1,0 +1,37 @@
+{
+    "amr_types": [
+        {
+            "number": 20,
+            "friendly_name": "LoadRunner",
+            "kinematics": {
+                "velocity": 10,
+                "acceleration": 3,
+                "deceleration": 3,
+                "load_time": 2,
+                "unload_time": 3
+            }
+        },
+        {
+            "number": 20,
+            "friendly_name": "ZTF",
+            "kinematics": {
+                "velocity": 1,
+                "acceleration": 0.5,
+                "deceleration": 0.5,
+                "load_time": 5,
+                "unload_time": 5
+            }
+        },
+        {
+            "number": 20,
+            "friendly_name": "Flip",
+            "kinematics": {
+                "velocity": 1,
+                "acceleration": 0.5,
+                "deceleration": 0.5,
+                "load_time": 10,
+                "unload_time": 10
+            }
+        }
+    ]
+}
